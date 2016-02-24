@@ -20,6 +20,6 @@ class Httpfs2 < Formula
   end
 
   test do
-    system "httpfs2-ssl-mt"
+    assert_match /Version/, pipe_output("httpfs2-ssl-mt 2>&1")
   end
 end
